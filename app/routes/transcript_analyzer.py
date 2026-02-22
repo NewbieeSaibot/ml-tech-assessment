@@ -106,7 +106,7 @@ async def analyze_multiple_transcripts(
 
         user_prompt = RAW_USER_PROMPT.format(transcript=transcript)
 
-        analysis = await adapter.run_completion(
+        analysis = await adapter.run_completion_async(
             system_prompt=SYSTEM_PROMPT,
             user_prompt=user_prompt,
             dto=TranscriptAnalysisDTO,
